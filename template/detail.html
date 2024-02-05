@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Details Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="application/x-javascript">
+      addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); }
+    </script>
+    <!-- Custom Theme files -->
+    <link href="/static/styledetails.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- //Custom Theme files -->
+    <!-- web font -->
+    <link href="//fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i" rel="stylesheet" />
+    <!-- //web font -->
+</head>
+
+<body>
+    <!-- main -->
+    <div class="main-w3layouts wrapper">
+        <h1>Welcome {{ n }} </h1>
+        <div class="main-agileinfo">
+            <div class="agileits-top">
+                <form action="/result" method="POST">
+                    <table class="tablemain">
+                        <tr>
+                            <td class="label-container"><label for="age">Age</label></td>
+                            <td class="input-container">
+                                <input class="number" type="number" id="age" name="age" placeholder="Enter your age"
+                                    required />
+                            <td class="last-column"><label for="mhr">Heart Rate</label></td>
+                            <td td class="last-column">
+                                <input type="number" id="mhr" name="mhr" required placeholder="Heart Rate (60-220)" />
+                            </td>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td><label for="sex">Gender</label></td>
+                            <td>
+                                <input type="radio" id="sex" name="sex" value="1" required />
+                                <label for="Male">Male</label>
+                                <input type="radio" id="sex" name="sex" value="0" />
+                                <label for="female">Female</label>
+                            </td>
+                            <td class="last-column"><label for="exang">Exercise-Induced Angina</label></td>
+                            <td class="last-column">
+                                <input type="radio" id="exang" name="exang" value="1" required />
+                                <label for="exang1">Yes</label>
+                                <input type="radio" id="exang" name="exang" value="0" />
+                                <label for="exang0">No</label>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td><label for="cp">Chest Pain Type</label></td>
+                            <td>
+                                <select name="cp" id="cp" required>
+                                    <option value="" disabled selected hidden>Select your option</option>
+                                    <option value="0">Asymptomatic</option>
+                                    <option value="1">Typical Angina</option>
+                                    <option value="2">Atypical Angina</option>
+                                    <option value="3">Non-anginal Pain</option>
+                                </select>
+                            </td>
+                            <td class="last-column"><label for="oldpeak">ST Depression</label></td>
+                            <td class="last-column">
+                                <input type="number" step=.01 id="oldpeak" name="oldpeak" required
+                                    placeholder="Range (0.0 - 6.0)" />
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td><label for="bp">Blood Pressure</label></td>
+                            <td>
+                                <input type="number" id="bp" name="bp" required
+                                    placeholder="Blood Pressure (90-200) in mm Hg" />
+                            </td>
+                            <td class="last-column">
+                                <label for="slp">Slope of peak ST segment</label>
+                            </td>
+                            <td class="last-column">
+                                <select name="slp" id="slp" required>
+                                    <option value="" disabled selected hidden>Select your option</option>
+                                    <option value="0">Upsloping</option>
+                                    <option value="1">Flat</option>
+                                    <option value="2">Downsloping</option>
+                                </select>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td><label for="chol">Cholestrol</label></td>
+                            <td>
+                                <input type="number" id="chol" name="chol" required
+                                    placeholder="Cholestrol (120-570) in mg/dl" />
+                            </td>
+                            <td class="last-column"><label for="caa">Number of Major Vessels</label></td>
+                            <td class="last-column">
+                                <select name="caa" id="caa" required>
+                                    <option value="" disabled selected hidden>Select your option</option>
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td><label for="ecg">ECG</label></td>
+                            <td>
+                                <select name="ecg" id="ecg" required>
+                                    <option value="" disabled selected hidden>Select your option</option>
+                                    <option value="0">Type 1 (Hypertrophy)</option>
+                                    <option value="1">Type 2 (Normal)</option>
+                                    <option value="2">
+                                        Type 3 (ST-T wave abnormality)
+                                    </option>
+                                </select>
+                            </td>
+                            <td class="last-column"><label for="thall">Thalassemia</label></td>
+                            <td class="last-column">
+                                <select name="thall" id="thall" required>
+                                    <option value="" disabled selected hidden>Select your option</option>
+                                    <option value="1">Fixed Defect (1)</option>
+                                    <option value="2">Normal (2)</option>
+                                    <option value="3">Reversible Defect (3)</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <center>
+                        <button class="btn-grad">PREDICT</button>
+                    </center>
+                </form>
+            </div>
+        </div>
+
+        <ul class="colorlib-bubbles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    <!-- //main -->
+
+    <footer class="footer">
+        <ul class="social-icon">
+            <li class="social-icon__item"><a class="social-icon__link"
+                    href="https://www.linkedin.com/in/snehadeep-de-773a56248/" target="_blank">
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                </a></li>
+            <li class="social-icon__item"><a class="social-icon__link" href="https://github.com/SnehadeepDe"
+                    target="_blank">
+                    <ion-icon name="logo-github"></ion-icon>
+                </a></li>
+            <li class="social-icon__item"><a class="social-icon__link" href="mailto:snehadeepde@mail.com"
+                    target="_blank" style="font-weight: 500;">
+                    <ion-icon name="mail"></ion-icon>
+                </a></li>
+        </ul>
+        <p>&copy;2024 Snapulse | Snehadeep De</p>
+    </footer>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result Page</title>
+    <link rel="stylesheet" href="/static/styleresult.css">
+</head>
+
+<body>
+
+
+    <div class="agileits-top">
+        <img class="heart" src="/static/heart.gif">.
+
+        {% if prediction==1 %}
+        <h1>UNFORTUNATELY YOU HAVE A HIGH CHANCE OF HAVING </h1>
+        <h1>A HEART ATTACK !!!</h1>
+        {% elif prediction==0 %}
+
+        <h1>WE PREDICTED THAT<br></h1>
+        <h1>YOU ARE NOT LIKELY TO HAVE A HEART ATTACK.</h1>
+        {% endif %}
+        <br>
+
+
+
+
+
+    </div>
+
+    <footer class="footer">
+        <ul class="social-icon">
+            <li class="social-icon__item"><a class="social-icon__link"
+                    href="https://www.linkedin.com/in/snehadeep-de-773a56248/" target="_blank">
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                </a></li>
+            <li class="social-icon__item"><a class="social-icon__link" href="https://github.com/SnehadeepDe"
+                    target="_blank">
+                    <ion-icon name="logo-github"></ion-icon>
+                </a></li>
+            <li class="social-icon__item"><a class="social-icon__link" href="mailto:snehadeepde@mail.com"
+                    target="_blank" style="font-weight: 500;">
+                    <ion-icon name="mail"></ion-icon>
+                </a></li>
+        </ul>
+        <p>&copy;2024 Snapulse | Snehadeep De</p>
+    </footer>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+
+</html>

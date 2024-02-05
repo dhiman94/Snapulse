@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
+
+*, *:before, *:after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+h2{
+    line-height: 2em;
+    font-size: 2em;
+    color: #3a2c66;
+}
+body {
+  min-height: 100vh;
+  font-family: 'Raleway', sans-serif;
+}
+
+.container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.container:hover,
+.container:active {
+  .top:before,
+  .top:after,
+  .bottom:before,
+  .bottom:after {
+    margin-left: 200px;
+    transform-origin: -200px 50%;
+    transition-delay: 0s;
+  }
+
+  .center {
+    opacity: 1;
+    transition-delay: 0.2s;
+  }
+}
+
+.top:before,
+.bottom:before,
+.top:after,
+.bottom:after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 200vmax;
+  height: 200vmax;
+  top: 50%;
+  left: 50%;
+  margin-top: -100vmax;
+  transform-origin: 0 50%;
+  transition: all 0.5s cubic-bezier(0.445, 0.05, 0, 1);
+  z-index: 10;
+  opacity: 0.65;
+  transition-delay: 0.2s;
+}
+
+.top:before {
+  transform: rotate(45deg);
+  background: #0E1555;
+}
+
+.top:after {
+  transform: rotate(135deg);
+  background: #4E1184;
+}
+
+.bottom:before {
+  transform: rotate(-45deg);
+  background: #932B77;
+}
+
+.bottom:after {
+  transform: rotate(-135deg);
+  background: #FD367E;
+}
+
+.center {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  top: 50%;
+  left: 50%;
+  margin-left: -200px;
+  margin-top: -200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  opacity: 0;
+  transition: all 0.5s cubic-bezier(0.445, 0.05, 0, 1);
+  transition-delay: 0s;
+  color: #333;
+}
+
+.center input {
+  width: 100%;
+  padding: 15px;
+  margin: 5px;
+  border-radius: 1px;
+  border: 1px solid #ccc;
+  font-family: inherit;
+}
+
+input:focus::placeholder {
+    color: transparent;
+  }
+
+         
+         
+  .btn-grad {
+    background-image: linear-gradient(to right, #AA076B 0%, #61045F  51%, #AA076B  100%);
+    margin: 10px;
+    padding: 10px 30px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 20px #eee;
+    border-radius: 8px;
+    display: block;
+    box-shadow: 0 0 5px  #282828;
+    border: transparent;
+  }
+
+  .btn-grad:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+  }
+ 
+ .title{
+  z-index: 999;
+  text-align: right;
+  justify-content: center;
+  position: relative;
+  right: 5%;
+  top:  40% ;
+  font-size: larger;
+  width: 30%;
+  text-shadow: 1.5px 1.5px 1.5px black;
+  color: #fff;
+  left: 65%;
+ }
+ @media(max-width:1250px) {
+  .container:hover{
+    .title
+   {
+    pointer-events:none;
+    opacity: 0;
+   }
+  }
+ }
+
+
+ 
