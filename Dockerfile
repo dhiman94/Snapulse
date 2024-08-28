@@ -1,4 +1,4 @@
-FROM python:latest
+FROM python:3.8-slim-buster
 LABEL maintainer="bhattacharya.dhiman"
 
 WORKDIR /app
