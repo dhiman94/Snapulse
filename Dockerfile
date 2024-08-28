@@ -1,4 +1,4 @@
-FROM python:3.8-alpine
+FROM python:latest
 LABEL maintainer="bhattacharya.dhiman"
 
 WORKDIR /app
